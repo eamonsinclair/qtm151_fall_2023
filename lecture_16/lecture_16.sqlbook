@@ -99,6 +99,8 @@ Try it yourself!
 -- Select a new driver id (needs to be unique)
 -- Make sure to deparate arguments by a semicolon!
 
+INSERT INTO drivers VALUES (5, 'Max Verstappen', 'Dutch', 51 );
+INSERT INTO drivers VALUES (6, 'Juan Pablo Montoya', 'Colombian', 6);
 
 
 -- SQLBook: Markup
@@ -186,7 +188,8 @@ Try it yourself!
 with more than 60 victories
 -- SQLBook: Code
 -- Write your own code!
-
+SELECT nationality, driver_id FROM drivers
+WHERE victories > 60;
 
 
 -- SQLBook: Markup
@@ -223,6 +226,8 @@ SELECT nationality,
 FROM drivers
 GROUP BY nationality
 HAVING SUM(victories) > 50;
+
+-- HAVING IS AFTER GROUP BY
 -- SQLBook: Markup
 <font size = "5">
 
